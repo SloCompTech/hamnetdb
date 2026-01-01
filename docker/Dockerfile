@@ -25,7 +25,8 @@ RUN apt update && \
     wget && \
 	apt clean && \
   rm -rf /var/lib/apt/lists/* && \
-  a2enmod cgi
+  a2enmod cgi && \
+  a2enmod headers
 
 # Add install util
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
