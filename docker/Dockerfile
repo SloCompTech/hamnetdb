@@ -63,4 +63,6 @@ COPY root /
 
 # Configure services
 RUN a2dissite 000-default && \
-  a2ensite hamnetdb
+  a2ensite hamnetdb && \
+  a2disconf security && \
+  a2enconf security-custom
